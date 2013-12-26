@@ -1,0 +1,32 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+section {
+	width: 100%;
+	height: 100%;
+}
+
+section#home {
+	background: url(../images/home-background.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+section#about {
+	background: url(../images/about-background.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+section#shop {
+	background: url(../images/shop-background.jpg);
+}
+
+section#gallery {
+	background: url(../images/gallery-background.jpg);
+}
+
+section#lifestyle {
+	background: url(../images/lifestyle-background.jpg) no-repeat center top;
+	background-size: cover;
+}
