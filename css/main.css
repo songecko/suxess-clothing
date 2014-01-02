@@ -1,6 +1,55 @@
 html, body {
 	width: 100%;
 	height: 100%;
+	font-family: 'PT Sans', sans-serif;
+}
+
+#menuBar {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #3e3e3e;
+	height: 66px;
+}
+
+#menuBar ul {
+	list-style: none;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#menuBar ul.menu {
+	width: 60%;
+}
+
+#menuBar ul.sharingMenu {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#menuBar ul li {
+	line-height: 66px;
+	float: left;
+}
+
+#menuBar ul.menu li {
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFFFFF;
+	width: 15%;
+}
+
+#menuBar ul.sharingMenu li {
+	margin-right: 22px;
+}
+
+#menuBar ul.menu li:last-child {
+	width: 40%;
+}
+
+#menuBar ul.menu li a {
+	color: #FFFFFF;
 }
 
 section {
@@ -13,9 +62,34 @@ section#home {
 	background-size: cover;
 }
 
+section#home .wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+section#home .wrapper img {
+	margin: 0 auto;
+}
+
 section#about {
 	background: url(../images/about-background.jpg) no-repeat center top;
 	background-size: cover;
+}
+
+section#about h2 {
+	text-align: center;
+	font-size: 69px;
+	margin: 0 0 20px 0;
+}
+
+section#about p {
+	text-align: center;
+	font-size: 36px;
+	margin: 0;
+}
+
+section#about img {
+	margin: 30px auto 0 auto;
 }
 
 section#shop {
