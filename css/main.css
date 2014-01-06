@@ -57,6 +57,12 @@ section {
 	height: 100%;
 }
 
+section .contentMiddle {
+	display: table-cell;
+	vertical-align: middle;
+	padding-bottom: 66px
+}
+
 section#home {
 	background: url(../images/home-background.jpg) no-repeat center top;
 	background-size: cover;
@@ -74,6 +80,7 @@ section#home .wrapper img {
 section#about {
 	background: url(../images/about-background.jpg) no-repeat center top;
 	background-size: cover;
+	display: table;
 }
 
 section#about h2 {
@@ -94,13 +101,88 @@ section#about img {
 
 section#shop {
 	background: url(../images/shop-background.jpg);
+	display: table;
+}
+
+section#shop .shopButton {
+	margin: 0 auto;
 }
 
 section#gallery {
 	background: url(../images/gallery-background.jpg);
+	display: table;
+}
+
+section#gallery h2 {
+	text-align: center;
+	font-size: 69px;
+	margin: 0 0 40px 0;
+	color: #FFFFFF;
+}
+
+section#gallery .categories {
+	margin-bottom: 50px;
+}
+
+section#gallery .categories ul {
+	list-style: none;
+	width: 485px;
+	margin: 0 auto;
+}
+
+section#gallery .categories ul li {
+	float: left;	
+	height: 32px;
+	line-height: 32px;
+	background: #FFFFFF;
+	border-left: 3px solid #00caa2;
+	margin-right: 12px;
+}
+
+section#gallery .categories ul li a {
+	color: #000000;
+	font-size: 16px;
+	padding: 0 15px;
+}
+
+section#gallery .categories ul li a:hover {
+	text-decoration: none;
+}
+
+section#gallery .images ul {
+	list-style: none;
+	width: 60%;
+	margin: 0 auto;
+}
+section#gallery .images ul li {
+	float: left;
+	background: #a9a9a9;
+	width: 20%;
+	height: 0;
+	margin-right: 5%;
+	padding-bottom: 20%;
+	margin-bottom: 30px;
 }
 
 section#lifestyle {
 	background: url(../images/lifestyle-background.jpg) no-repeat center top;
 	background-size: cover;
+}
+
+section#contact {
+	display: table;
+}
+
+section#contact h2 {
+	text-align: center;
+	font-size: 69px;
+	margin: 0 0 20px 0;
+}
+
+section#contact p.introText {
+	font-size: 14px;
+	color: #adadad;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
 }
