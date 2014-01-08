@@ -10,6 +10,8 @@
         <meta name="description" content="Suxess Clothing">
         <meta name="viewport" content="width=device-width">
 
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -39,7 +41,9 @@
     	</section>
     	<section id="shop">
     		<div class="contentMiddle">
-    			<img src="images/shopButton.png" alt="Shop" class="shopButton img-responsive" />
+    			<a href="http://suxessclothing.com/shop/" target="_blank">
+    				<img src="images/shopButton.png" alt="Shop" class="shopButton img-responsive" />
+    			</a>
     		</div>
     	</section>
     	<section id="gallery">
@@ -71,16 +75,37 @@
     	<section id="contact">
     		<div class="contentMiddle">  
 	    		<h2>CONTACT</h2>
-	    		<p class="introText">If you have any questions regarding about the brand, how to shop, cost, or any other stuff, feel free to communicate with us trough here. We will try to reach you as soon as possible. For business inquiry you can call 787-245-6664 or email us at sales@suxessclothing.com</p>
-	    		<form action="#" method="post">
-	    			<div class="pull-left">
-	    				<input type="text" name="contact[name]" id="contact_name" />
-	    				<input type="text" name="contact[phone]" id="contact_phone" />
-	    				<input type="text" name="contact[email]" id="contact_email" />
-	    			</div>
-	    			<div class="pull-right">
-	    				<textarea name="contact[message]" id="contact_message">
-	    				</textarea>
+	    		<p class="introText">If you have any questions regarding about the brand, how to shop, cost, or any other stuff, feel free to communicate with us trough here. We will try to reach you as soon as possible. For business inquiry you can call 787-245-6664 or email us at <a href="mailto:sales@suxessclothing.com">sales@suxessclothing.com</a>.</p>
+	    		<form action="#" method="post" class="container">
+	    			<fieldset class="clarfix">
+		    			<div class="pull-left">
+		    				<input type="text" name="contact[name]" id="contact_name" placeholder="Name" 
+		    					data-rule-required="true"
+		    					data-msg-required="Please enter your name" 
+		    				/>
+		    				<input type="text" name="contact[phone]" id="contact_phone" placeholder="Phone" 
+		    					data-rule-required="true"
+		    					data-msg-required="Please enter your phone"
+		    				/>
+		    				<input type="text" name="contact[email]" id="contact_email" placeholder="Email"
+		    					data-rule-required="true" 
+		    					data-rule-email="true" 
+		    					data-msg-required="Please enter your email address" 
+		    					data-msg-email="Please enter a valid email address"
+		    				/>
+		    			</div>
+		    			<div class="pull-right">
+		    				<textarea name="contact[message]" id="contact_message" placeholder="Message"
+		    					data-rule-required="true"
+		    					data-msg-required="Please enter your message"
+		    				></textarea>
+		    			</div>
+	    			</fieldset>
+	    			<div class="actions clearfix">
+	    				<button type="submit">Send</button>
+	    				<button type="reset">Clear Form</button>
+	    				<p class="success">Thank you to contact us.</p>
+	    				<p class="error">Please fill all fields correctly.</p>
 	    			</div>
 	    		</form>
 	    	</div>
@@ -105,6 +130,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/jquery.scrollTo.min.js"></script>
+        <script src="js/vendor/jquery.validate.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
