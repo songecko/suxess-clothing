@@ -9,7 +9,7 @@ $email = $contact['email'];
 $message = $contact['message'];
 
 //Envio de email
-$to = "songecko@gmail.com";
+$to = "sales@suxessclothing.com";
 $subject = "[Suxess Clothing] new message";
 $body = ' 
 <html> 

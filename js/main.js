@@ -11,6 +11,11 @@ $(document).ready(function()
 	$('.categories a').click(function(e)
 	{
 		e.preventDefault();
+		
+		var imagesTab = $(this).data('imagesTab');
+		
+		$('#gallery .images ul').hide();
+		$(imagesTab).show();
 	});
 	
 	$("section#contact form").validate(

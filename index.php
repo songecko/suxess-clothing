@@ -1,3 +1,16 @@
+<?php
+	function getGalleryList($from, $to, $folder, $gallery = 'default')
+	{
+		$list = '';
+		for ($i=$from; $i<=$to; $i++)
+		{
+			$file = str_pad($i, 3, '0', STR_PAD_LEFT).'.jpg';
+			$list .= '<li style="background-image:url('.$folder.'/'.$file.');"><a href="'.$folder.'/'.$file.'" target="_blank" data-gallery="'.$gallery.'"></a></li>';
+		}
+		
+		return $list;
+	}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -14,6 +27,8 @@
 		
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+        <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <!--[if lt IE 9]>
@@ -32,10 +47,10 @@
     	<section id="about">
     		<div class="contentMiddle">    		
 	    		<h2>ABOUT</h2>
-	    		<p>Suxess is brand that focuses on promoting personal success,<p>
+	    		<p>Suxess is a brand that focuses on promoting personal success,<p>
 	    		<p>doing what you like, how you want to, as long as you work for it.</p>
 	    		<p>It can be skating, surfing, making music, fashion, anything that you want.</p>
-	    		<p>Our mantra to spread this movemente is “Stay Suxessful” and “Think+”</p>
+	    		<p>Our mantra to spread this movement is “Stay Suxessful” and “Think+”</p>
 	    		<img src="images/about-footer.png" class="img-responsive">
     		</div>
     	</section>
@@ -51,21 +66,20 @@
 	    		<h2>GALLERY</h2>
 	    		<div class="categories">
 		    		<ul class="clearfix">
-		    			<li><a href="#">FIVEPANELS</a></li>
-		    			<li><a href="#">SNAPBACKS</a></li>
-		    			<li><a href="#">SX LIFESTYLE</a></li>
+		    			<li><a href="#" data-images-tab="#fivepanels">FIVEPANELS</a></li>
+		    			<li><a href="#" data-images-tab="#snapbacks">SNAPBACKS</a></li>
+		    			<li><a href="#" data-images-tab="#sx-lifestyle">SX LIFESTYLE</a></li>
 		    		</ul>
 		    	</div>
 	    		<div class="images">
-	    			<ul class="clarfix">
-	    				<li></li>
-	    				<li></li>
-	    				<li></li>
-	    				<li></li>
-	    				<li></li>
-	    				<li></li>
-	    				<li></li>
-	    				<li></li>
+	    			<ul id="fivepanels" class="clearfix">
+	    				<?php echo getGalleryList(1, 11, 'images/gallery/fivepanel', '#blueimp-gallery-fivepanels')?>
+	    			</ul>
+	    			<ul id="snapbacks" class="clearfix" style="display:none;">
+	    				<?php echo getGalleryList(1, 5, 'images/gallery/snapback', '#blueimp-gallery-snapbacks')?>
+	    			</ul>
+	    			<ul id="sx-lifestyle" class="clearfix" style="display:none;">
+	    				<?php echo getGalleryList(1, 23, 'images/gallery/sx_lifestyle', '#blueimp-gallery-sx-lifestyle')?>
 	    			</ul>
 	    		</div>
     		</div>
@@ -120,15 +134,52 @@
 	    		<li><a href="#" data-section="#lifestyle">The suxess lifestyle (channel)</a></li>
 	    	</ul>
 	    	<ul class="sharingMenu">
-	    		<li><a href="#" target="_blank"><img src="images/fb-icon.png" /></a></li>
-	    		<li><a href="#" target="_blank"><img src="images/ig-icon.png" /></a></li>
-	    		<li><a href="#" target="_blank"><img src="images/tw-icon.png" /></a></li>
+	    		<li><a href="http://www.facebook.com/suxessclothing.com" target="_blank"><img src="images/fb-icon.png" /></a></li>
+	    		<li><a href="http://instagram.com/suxessclothing" target="_blank"><img src="images/ig-icon.png" /></a></li>
+	    		<li><a href="https://twitter.com/suxessclothing" target="_blank"><img src="images/tw-icon.png" /></a></li>
 	    	</ul>
     	</div>
     	
+    	<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+		    <!-- The container for the modal slides -->
+		    <div class="slides"></div>
+		    <!-- Controls for the borderless lightbox -->
+		    <h3 class="title"></h3>
+		    <a class="prev">‹</a>
+		    <a class="next">›</a>
+		    <a class="close">×</a>
+		    <a class="play-pause"></a>
+		    <ol class="indicator"></ol>
+		    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+		    <div class="modal fade">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" aria-hidden="true">&times;</button>
+		                    <h4 class="modal-title"></h4>
+		                </div>
+		                <div class="modal-body next"></div>
+		                <div class="modal-footer">
+		                    <button type="button" class="btn btn-default pull-left prev">
+		                        <i class="glyphicon glyphicon-chevron-left"></i>
+		                        Previous
+		                    </button>
+		                    <button type="button" class="btn btn-primary next">
+		                        Next
+		                        <i class="glyphicon glyphicon-chevron-right"></i>
+		                    </button>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
     	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+        <script src="js/vendor/bootstrap-image-gallery.min.js"></script>
         <script src="js/vendor/jquery.scrollTo.min.js"></script>
         <script src="js/vendor/jquery.validate.min.js"></script>
         <script src="js/main.js"></script>
