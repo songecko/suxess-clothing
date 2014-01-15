@@ -134,7 +134,7 @@
 	    		<li><a href="#" data-section="#lifestyle">The suxess lifestyle (channel)</a></li>
 	    	</ul>
 	    	<ul class="sharingMenu">
-	    		<li><a href="http://www.facebook.com/suxessclothing.com" target="_blank"><img src="images/fb-icon.png" /></a></li>
+	    		<li><a href="http://www.facebook.com/suxessclothing" target="_blank"><img src="images/fb-icon.png" /></a></li>
 	    		<li><a href="http://instagram.com/suxessclothing" target="_blank"><img src="images/ig-icon.png" /></a></li>
 	    		<li><a href="https://twitter.com/suxessclothing" target="_blank"><img src="images/tw-icon.png" /></a></li>
 	    	</ul>
