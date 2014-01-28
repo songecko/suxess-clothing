@@ -21,7 +21,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Suxess Clothing</title>
         <meta name="description" content="Suxess Clothing">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
 
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		
@@ -125,20 +126,30 @@
 	    	</div>
     	</section>
     	
-    	<div id="menuBar">
-	    	<ul class="menu">
-	    		<li><a href="#" data-section="#about">about</a></li>
-	    		<li><a href="#" data-section="#shop">shop</a></li>
-	    		<li><a href="#" data-section="#gallery">gallery</a></li>
-	    		<li><a href="#" data-section="#contact">contact</a></li>
-	    		<li><a href="#" data-section="#lifestyle">The suxess lifestyle (channel)</a></li>
-	    	</ul>
+    	<nav class="navbar navbar-default" id="menuBar" role="navigation">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      				<span class="sr-only">Toggle navigation</span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+    			</button>
+  			</div>
+  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<ul class="menu">
+		    		<li><a href="#" data-section="#about">about</a></li>
+		    		<li><a href="#" data-section="#shop">shop</a></li>
+		    		<li><a href="#" data-section="#gallery">gallery</a></li>
+		    		<li><a href="#" data-section="#contact">contact</a></li>
+		    		<li><a href="#" data-section="#lifestyle">The suxess lifestyle (channel)</a></li>
+		    	</ul>
+		    </div>
 	    	<ul class="sharingMenu">
 	    		<li><a href="http://www.facebook.com/suxessclothing" target="_blank"><img src="images/fb-icon.png" /></a></li>
 	    		<li><a href="http://instagram.com/suxessclothing" target="_blank"><img src="images/ig-icon.png" /></a></li>
 	    		<li><a href="https://twitter.com/suxessclothing" target="_blank"><img src="images/tw-icon.png" /></a></li>
 	    	</ul>
-    	</div>
+    	</nav>
     	
     	<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
 		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">

@@ -10,6 +10,17 @@ html, body {
 	width: 100%;
 	background: #3e3e3e;
 	height: 66px;
+	border: none;
+	margin-bottom: 0;
+}
+
+#menuBar .navbar-toggle {
+	margin: 16px 0 0 15px;
+	float: left;
+}
+
+#menuBar .navbar-toggle:hover, #menuBar .navbar-toggle:focus {
+	background-color: #3e3e3e;
 }
 
 #menuBar ul {
@@ -270,4 +281,37 @@ section#contact form button[type="reset"] {
 section#contact form button[type="submit"] {
 	background: #00caa2;
 	color: #326b5c;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	section#lifestyle {
+		background-position: -523px;	
+	}
+	
+	#menuBar .navbar-collapse {
+		position: absolute;
+		top: -199px;
+		background-color: rgb(62, 62, 62);
+		width: 100%;
+		padding: 0px;
+	}
+	
+	#menuBar ul.menu {
+		width: 100%;
+		padding: 0;
+	}
+	
+	#menuBar ul.menu li {
+		float: none;
+		width: 100%;
+		line-height: 40px;
+		border-bottom: 1px solid #ccc;
+		font-size: 12px;
+	}
+	
+	#menuBar ul.menu li:last-child {
+		width: 100%;
+	}
 }
